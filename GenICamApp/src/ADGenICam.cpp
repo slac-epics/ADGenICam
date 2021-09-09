@@ -1,7 +1,11 @@
 /*
  * ADGenICam.cpp
  *
+<<<<<<< HEAD
  * This is a base class driver for GenICam cameras
+=======
+ * This is a base class driver for GenICam cameras 
+>>>>>>> 59fa2a5 (Baseline checkout.)
  *
  * Author: Mark Rivers
  *         University of Chicago
@@ -354,6 +358,7 @@ void ADGenICam::showFeature(std::string const &featureName)
         return;
     }
     pFeature->report(stdout, 2);
+    return;
 }
 
 asynStatus ADGenICam::drvUserCreate(asynUser *pasynUser, const char *drvInfo,
@@ -458,6 +463,7 @@ asynStatus ADGenICam::addADDriverFeatures()
     } stdParam;
     stdParam params[] = {
         {ADImageMode,         "AcquisitionMode",       GCFeatureTypeEnum},
+        {ADFirmwareVersion,   "DeviceFirmwareVersion", GCFeatureTypeString},
         {ADManufacturer,      "DeviceVendorName",      GCFeatureTypeString},
         {ADModel,             "DeviceModelName",       GCFeatureTypeString},
         {ADMaxSizeX,          "WidthMax",              GCFeatureTypeInteger},

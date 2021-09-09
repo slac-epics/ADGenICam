@@ -144,173 +144,173 @@ def quoteString(string):
 def make_box():
     return """# (Rectangle)
     rectangle {
-    	object {
-    		x=%(x)d
-    		y=%(y)d
-    		width=%(boxWidth)d
-    		height=%(boxHeight)d
-    	}
-    	"basic attribute" {
-    		clr=14
-    		fill="outline"
-    	}
+        object {
+            x=%(x)d
+            y=%(y)d
+            width=%(boxWidth)d
+            height=%(boxHeight)d
+        }
+        "basic attribute" {
+            clr=14
+            fill="outline"
+        }
     }
     
     rectangle {
-    	object {
-    		x=%(headingX)d
-    		y=%(headingY)d
-    		width=%(headingWidth)d
-    		height=%(headingHeight)d
-    	}
-    	"basic attribute" {
-    		clr=2
-    	}
+        object {
+            x=%(headingX)d
+            y=%(headingY)d
+            width=%(headingWidth)d
+            height=%(headingHeight)d
+        }
+        "basic attribute" {
+            clr=2
+        }
     }
     text {
-    	object {
-    		x=%(headingX)d
-    		y=%(headingY)d
-    		width=%(headingWidth)d
-    		height=%(headingHeight)d
-    	}
-    	"basic attribute" {
-    		clr=54
-    	}
-    	textix="  %(name)s"
-    	align="horiz. centered"
+        object {
+            x=%(headingX)d
+            y=%(headingY)d
+            width=%(headingWidth)d
+            height=%(headingHeight)d
+        }
+        "basic attribute" {
+            clr=54
+        }
+        textix="  %(name)s"
+        align="horiz. centered"
     }
     """ % globals()
 
 def make_description():
     return """# (Related Display)
-		"related display" {
-			object {
-				x=%(nx)d
-				y=%(y)d
-				width=10
-				height=20
-			}
-			display[0] {
-				label="?"
-				name="aravisHelp.adl"
-				args="desc0=%(desc0)s,desc1=%(desc1)s,desc2=%(desc2)s,desc3=%(desc3)s,desc4=%(desc4)s,desc5=%(desc5)s"
-			}
-			clr=14
-			bclr=51
-		}
+        "related display" {
+            object {
+                x=%(nx)d
+                y=%(y)d
+                width=10
+                height=20
+            }
+            display[0] {
+                label="?"
+                name="aravisHelp.adl"
+                args="desc0=%(desc0)s,desc1=%(desc1)s,desc2=%(desc2)s,desc3=%(desc3)s,desc4=%(desc4)s,desc5=%(desc5)s"
+            }
+            clr=14
+            bclr=51
+        }
     """ % globals()
 
 def make_label():
     return """
 # (Static Text)
-		text {
-			object {
-				x=%(nx)d
-				y=%(y)d
-				width=%(labelWidth)d
-				height=%(labelHeight)d
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="%(nodeName)s"
-			align="horiz. right"
-		}
+        text {
+            object {
+                x=%(nx)d
+                y=%(y)d
+                width=%(labelWidth)d
+                height=%(labelHeight)d
+            }
+            "basic attribute" {
+                clr=14
+            }
+            textix="%(nodeName)s"
+            align="horiz. right"
+        }
     """ % globals()             
 
 def make_ro():
     return """# (Textupdate)
-		"text update" {
-			object {
-				x=%(nx)d
-				y=%(y)d
-				width=%(readonlyWidth)d
-				height=%(readonlyHeight)d
-			}
-			monitor {
-				chan="$(P)$(R)%(recordName)s_RBV"
-				clr=54
-				bclr=4
-			}
-			align="horiz. left"
-			limits {
-			}
-		}
+        "text update" {
+            object {
+                x=%(nx)d
+                y=%(y)d
+                width=%(readonlyWidth)d
+                height=%(readonlyHeight)d
+            }
+            monitor {
+                chan="$(P)$(R)%(recordName)s_RBV"
+                clr=54
+                bclr=4
+            }
+            align="horiz. left"
+            limits {
+            }
+        }
     """ % globals()         
 
 def make_demand():
     return """# (Textentry)
-		"text entry" {
-			object {
-				x=%(nx)d
-				y=%(y)d
-				width=%(textEntryWidth)d
-				height=%(textEntryHeight)d
-			}
-			control {
-				chan="$(P)$(R)%(recordName)s"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
+        "text entry" {
+            object {
+                x=%(nx)d
+                y=%(y)d
+                width=%(textEntryWidth)d
+                height=%(textEntryHeight)d
+            }
+            control {
+                chan="$(P)$(R)%(recordName)s"
+                clr=14
+                bclr=51
+            }
+            limits {
+            }
+        }
     """ % globals()
 
 def make_rbv():
     return """# (Textupdate)
-		"text update" {
-			object {
-				x=%(nx)d
-				y=%(y)d
-				width=%(readbackWidth)d
-				height=%(readbackHeight)d
-			}
-			monitor {
-				chan="$(P)$(R)%(recordName)s_RBV"
-				clr=54
-				bclr=4
-			}
-			align="horiz. left"
-			limits {
-			}
-		}
+        "text update" {
+            object {
+                x=%(nx)d
+                y=%(y)d
+                width=%(readbackWidth)d
+                height=%(readbackHeight)d
+            }
+            monitor {
+                chan="$(P)$(R)%(recordName)s_RBV"
+                clr=54
+                bclr=4
+            }
+            align="horiz. left"
+            limits {
+            }
+        }
     """ % globals() 
 
 def make_menu():
     return """# (Menu Button)
-		menu {
-			object {
-				x=%(nx)d
-				y=%(y)d
-				width=%(menuWidth)d
-				height=%(menuHeight)d
-			}
-			control {
-				chan="$(P)$(R)%(recordName)s"
-				clr=14
-				bclr=51
-			}
-		}
+        menu {
+            object {
+                x=%(nx)d
+                y=%(y)d
+                width=%(menuWidth)d
+                height=%(menuHeight)d
+            }
+            control {
+                chan="$(P)$(R)%(recordName)s"
+                clr=14
+                bclr=51
+            }
+        }
     """ % globals()
 
 def make_cmd():
     return """# (Message Button)
     "message button" {
-    	object {
-    		x=%(nx)d
-    		y=%(y)d
-    		width=%(messageButtonWidth)d
-    		height=%(messageButtonHeight)d
-    	}
-    	control {
-    		chan="$(P)$(R)%(recordName)s.PROC"
-    		clr=14
-    		bclr=51
-    	}
-    	label="%(nodeName)s"
-    	press_msg="1"
+        object {
+            x=%(nx)d
+            y=%(y)d
+            width=%(messageButtonWidth)d
+            height=%(messageButtonHeight)d
+        }
+        control {
+            chan="$(P)$(R)%(recordName)s.PROC"
+            clr=14
+            bclr=51
+        }
+        label="%(nodeName)s"
+        press_msg="1"
     }
     """ % globals()
 
@@ -318,119 +318,119 @@ def write_adl_file(fileName):
     adl_file = open(fileName, "w")
     adl_file.write("""
     file {
-    	name="/home/epics/devel/areaDetector-3-3-1/aravisGigE/aravisGigEApp/op/adl/aravisCamera.adl"
-    	version=030109
+        name="/home/epics/devel/areaDetector-3-3-1/aravisGigE/aravisGigEApp/op/adl/aravisCamera.adl"
+        version=030109
     }
     display {
-    	object {
-    		x=50
-    		y=50
-    		width=%(w)d
-    		height=%(h)d
-    	}
-    	clr=14
-    	bclr=4
-    	cmap=""
-    	gridSpacing=5
-    	gridOn=0
-    	snapToGrid=0
+        object {
+            x=50
+            y=50
+            width=%(w)d
+            height=%(h)d
+        }
+        clr=14
+        bclr=4
+        cmap=""
+        gridSpacing=5
+        gridOn=0
+        snapToGrid=0
     }
     "color map" {
-    	ncolors=65
-    	colors {
-    		ffffff,
-    		ececec,
-    		dadada,
-    		c8c8c8,
-    		bbbbbb,
-    		aeaeae,
-    		9e9e9e,
-    		919191,
-    		858585,
-    		787878,
-    		696969,
-    		5a5a5a,
-    		464646,
-    		2d2d2d,
-    		000000,
-    		00d800,
-    		1ebb00,
-    		339900,
-    		2d7f00,
-    		216c00,
-    		fd0000,
-    		de1309,
-    		be190b,
-    		a01207,
-    		820400,
-    		5893ff,
-    		597ee1,
-    		4b6ec7,
-    		3a5eab,
-    		27548d,
-    		fbf34a,
-    		f9da3c,
-    		eeb62b,
-    		e19015,
-    		cd6100,
-    		ffb0ff,
-    		d67fe2,
-    		ae4ebc,
-    		8b1a96,
-    		610a75,
-    		a4aaff,
-    		8793e2,
-    		6a73c1,
-    		4d52a4,
-    		343386,
-    		c7bb6d,
-    		b79d5c,
-    		a47e3c,
-    		7d5627,
-    		58340f,
-    		99ffff,
-    		73dfff,
-    		4ea5f9,
-    		2a63e4,
-    		0a00b8,
-    		ebf1b5,
-    		d4db9d,
-    		bbc187,
-    		a6a462,
-    		8b8239,
-    		73ff6b,
-    		52da3b,
-    		3cb420,
-    		289315,
-    		1a7309,
-    	}
+        ncolors=65
+        colors {
+            ffffff,
+            ececec,
+            dadada,
+            c8c8c8,
+            bbbbbb,
+            aeaeae,
+            9e9e9e,
+            919191,
+            858585,
+            787878,
+            696969,
+            5a5a5a,
+            464646,
+            2d2d2d,
+            000000,
+            00d800,
+            1ebb00,
+            339900,
+            2d7f00,
+            216c00,
+            fd0000,
+            de1309,
+            be190b,
+            a01207,
+            820400,
+            5893ff,
+            597ee1,
+            4b6ec7,
+            3a5eab,
+            27548d,
+            fbf34a,
+            f9da3c,
+            eeb62b,
+            e19015,
+            cd6100,
+            ffb0ff,
+            d67fe2,
+            ae4ebc,
+            8b1a96,
+            610a75,
+            a4aaff,
+            8793e2,
+            6a73c1,
+            4d52a4,
+            343386,
+            c7bb6d,
+            b79d5c,
+            a47e3c,
+            7d5627,
+            58340f,
+            99ffff,
+            73dfff,
+            4ea5f9,
+            2a63e4,
+            0a00b8,
+            ebf1b5,
+            d4db9d,
+            bbc187,
+            a6a462,
+            8b8239,
+            73ff6b,
+            52da3b,
+            3cb420,
+            289315,
+            1a7309,
+        }
     }
 
     rectangle {
-    	object {
-    		x=0
-    		y=4
-    		width=%(w)d
-    		height=25
-    	}
-    	"basic attribute" {
-    		clr=2
-    	}
+        object {
+            x=0
+            y=4
+            width=%(w)d
+            height=25
+        }
+        "basic attribute" {
+            clr=2
+        }
     }
     
-		text {
-			object {
-				x=0
-				y=5
-				width=%(w)d
-				height=24
-			}
-			"basic attribute" {
-				clr=54
-			}
-			textix="%(camera_name)s Features Screen #%(fileNumber)d - $(P)$(R)"
-			align="horiz. centered"
-		}
+        text {
+            object {
+                x=0
+                y=5
+                width=%(w)d
+                height=24
+            }
+            "basic attribute" {
+                clr=54
+            }
+            textix="%(camera_name)s Features Screen #%(fileNumber)d - $(P)$(R)"
+            align="horiz. centered"
+        }
     """ %globals())
     
     adl_file.write(text)
