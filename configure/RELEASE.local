@@ -39,6 +39,6 @@ EPICS_BASE      = $(EPICS_SITE_TOP)/base/$(BASE_MODULE_VERSION)
 # Check for undefined EPICS_BASE
 -include $(TOP)/../../EPICS_BASE.check
 
-MY_MODULES	= /cds/group/pcds/epics-dev/bhill/epics/modules
+#MY_MODULES	= /cds/group/pcds/epics-dev/bhill/epics/modules
 
 #ADCORE	= $(MY_MODULES)/ADCore-git
