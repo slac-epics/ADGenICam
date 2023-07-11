@@ -59,6 +59,9 @@ ADGenICam::ADGenICam(const char *portName, size_t maxMemory, int priority, int s
     createParam(GCPixelFormatString,     asynParamInt32,   &GCPixelFormat);
     
     /* Set initial values of some parameters */
+#ifdef NDBitsPerPixelString
+    setIntegerParam( NDBitsPerPixel, 8);
+#endif
     setIntegerParam(NDDataType, NDUInt8);
     setIntegerParam(NDColorMode, NDColorModeMono);
     setIntegerParam(NDArraySizeZ, 0);
