@@ -13,3 +13,4 @@ configure/*.local
 O.*/
 *~
 *.swp
+RELEASE_SITE
