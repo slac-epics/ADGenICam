@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 907
-y 1482
+x 215
+y 1503
 w 700
 h 579
 font "helvetica-medium-r-12.0"
@@ -84,25 +84,6 @@ value {
 }
 endObjectProperties
 
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 32
-y 188
-w 172
-h 20
-font "helvetica-medium-r-12.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 3
-value {
-  "BIT: BuiltInTest (0;0=OK)"
-}
-endObjectProperties
-
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
@@ -138,30 +119,6 @@ y 32
 w 176
 h 20
 controlPv "$(P)$(R)OpalInfo_RBV"
-font "helvetica-medium-r-12.0"
-fontAlign "center"
-fgColor index 15
-fgAlarm
-bgColor index 12
-limitsFromDb
-nullColor index 25
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 212
-y 188
-w 108
-h 20
-controlPv "$(P)$(R)OpalBuiltInTest_RBV"
 font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 15
@@ -315,7 +272,7 @@ x 596
 y 164
 w 88
 h 20
-controlPv "$(P)$(R)OpalDefPixelCorr_RBV"
+controlPv "$(P)$(R)GC_TestPattern_RBV"
 font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 15
@@ -345,8 +302,8 @@ bgColor index 5
 inconsistentColor index 40
 topShadowColor index 2
 botShadowColor index 13
-controlPv "$(P)$(R)OpalDefPixelCorr"
-indicatorPv "$(P)$(R)OpalDefPixelCorr_RBV"
+controlPv "$(P)$(R)GC_TestPattern"
+indicatorPv "$(P)$(R)GC_TestPattern_RBV"
 font "helvetica-medium-r-14.0"
 endObjectProperties
 
@@ -365,7 +322,7 @@ fontAlign "right"
 fgColor index 14
 bgColor index 3
 value {
-  "Defective Pixel Corr."
+  "Test Pattern"
 }
 endObjectProperties
 
@@ -698,7 +655,7 @@ x 212
 y 164
 w 108
 h 20
-controlPv "$(P)$(R)OpalBitsPerPixel_RBV"
+controlPv "$(P)$(R)GC_SensorPixelSize_RBV"
 font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 15
@@ -786,7 +743,7 @@ x 576
 y 84
 w 108
 h 20
-controlPv "$(P)$(R)OpalTemperature_RBV"
+controlPv "$(P)$(R)GC_SensorTemperature_RBV"
 font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 15
@@ -910,5 +867,166 @@ onLabel "Rereading FW BuildState..."
 offLabel "Cam Build State Versions"
 3d
 font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 592
+y 196
+w 92
+h 20
+controlPv "$(P)$(R)GC_AcqExpTime_RBV"
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 15
+fgAlarm
+bgColor index 12
+nullColor index 40
+smartRefresh
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 500
+y 196
+w 88
+h 20
+controlPv "$(P)$(R)GC_AcqExpTime"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 5
+editable
+motifWidget
+nullColor index 40
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 340
+y 196
+w 156
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+value {
+  "AcqExpTime"
+}
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 132
+y 292
+w 48
+h 20
+controlPv "$(P)$(R)GC_AcquisitionStart"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 5
+editable
+motifWidget
+nullColor index 40
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 292
+w 108
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+value {
+  "Start Acquisition"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 320
+w 108
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+value {
+  "Stop Acquisition"
+}
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 132
+y 320
+w 48
+h 20
+controlPv "$(P)$(R)GC_AcquisitionStop"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 5
+editable
+motifWidget
+nullColor index 40
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
 endObjectProperties
 
