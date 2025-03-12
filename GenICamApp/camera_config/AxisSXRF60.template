@@ -10,19 +10,19 @@ record( stringin, "$(P)$(R)CamModel" )
 
 record( stringin, "$(P)$(R)CamModelScreen" )
 {
-	field( VAL,   "tucsenScreens/TucsenFeatures.edl" )
+	field( VAL,   "ADGenICamScreens/AxisSXRF60.edl" )
 	field( PINI,  "YES" )
 }
 
 record( stringin, "$(P)$(R)CamType" )
 {
-	field( VAL,   "Tucsen" )
+	field( VAL,   "Euresys FrameGrabber" )
 	field( PINI,  "YES" )
 }
 
 record( stringin, "$(P)$(R)CamTypeScreen" )
 {
-	field( VAL,   "tucsenScreens/TucsenCamType.edl" )
+	field( VAL,   "ADGenICamScreens/EuresysCamType.edl" )
 	field( PINI,  "YES" )
 }
 
