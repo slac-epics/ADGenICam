@@ -8,8 +8,14 @@ include $(TOP)/configure/CONFIG
 # databases, templates, substitutions like this
 
 MODELS = $(wildcard ../*.env)
-DB_INSTALLS += $(MODELS)
-DB_INSTALLS += $(subst .env,.template,$(MODELS))
+MODELS := $(subst .env,,$(MODELS))
+MODELS := $(subst ../,,$(MODELS))
+
+DB += $(addsuffix .db, $(MODELS))
+
+DB_INSTALLS += $(addprefix $(TOP)/GenICamApp/camera_config/, $(addsuffix .env, $(MODELS)))
+DB_INSTALLS += $(addprefix $(TOP)/GenICamApp/camera_config/, $(addsuffix .template, $(MODELS)))
+
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

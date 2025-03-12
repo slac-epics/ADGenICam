@@ -1,0 +1,21 @@
+# A simple MODEL substitutions file which preserves macro defaults
+# but expands any included rbvMonitor.template or other templates.
+file AxisSXRF60.template
+{
+	{
+		P				= "\$(P)",
+		R				= "\$(R)",
+		PORT			= "\$(PORT)",
+	}
+}
+
+# This filename comes from processing the camera's xml file
+# to generate the features database template file and gui files.
+file Tucsen_CXP_Dhyana6060BSI.template
+{
+	{
+		P				= "\$(P)",
+		R				= "\$(R)",
+		PORT			= "\$(PORT)",
+	}
+}
