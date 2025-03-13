@@ -14,3 +14,37 @@ record( stringin, "$(P)$(R)CamModelScreen" )
 	field( PINI,  "YES" )
 }
 
+# Override FLNK in ADCore PV AcquireTime to cause our calc record to process
+record( ao, "$(P)$(R)AcquireTime" )
+{
+	field( FLNK, "$(P)$(R)AxisCalcAcquireTime" )
+}
+# Use calcout records to convert to/from AcquireTime in sec and GC_AcqExpTime in uSec
+record( calcout, "$(P)$(R)AxisCalcAcquireTime" )
+{
+	field( INPA, "$(P)$(R)AcquireTime" )
+	field( INPB, "1e-6" )
+	field( CALC, "MAX(0,MIN(A/B,3600000000))" )
+	field( OUT,  "$(P)$(R)GC_AcqExpTime PP MS" )
+	field( HOPR, "3600000000" )
+	field( LOPR, "0" )
+	field( EGU,  "uSec" )
+}
+record( ao, "$(P)$(R)GC_AcqExpTime" )
+{
+	field( EGU,  "uSec" )
+	field( FLNK, "$(P)$(R)GC_AcqExpTime_RBV" )
+}
+record( ai, "$(P)$(R)GC_AcqExpTime_RBV" )
+{
+	field( EGU,  "uSec" )
+	field( FLNK, "$(P)$(R)AxisCalcAcquireTime_RBV" )
+}
+record( calcout, "$(P)$(R)AxisCalcAcquireTime_RBV" )
+{
+	field( INPA, "$(P)$(R)GC_AcqExpTime_RBV" )
+	field( INPB, "1e-6" )
+	field( CALC, "A*B" )
+	field( OUT,  "$(P)$(R)AcquireTime_RBV" )
+	field( EGU,  "sec" )
+}
