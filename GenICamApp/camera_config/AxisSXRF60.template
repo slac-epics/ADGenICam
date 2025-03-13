@@ -14,15 +14,3 @@ record( stringin, "$(P)$(R)CamModelScreen" )
 	field( PINI,  "YES" )
 }
 
-record( stringin, "$(P)$(R)CamType" )
-{
-	field( VAL,   "Euresys FrameGrabber" )
-	field( PINI,  "YES" )
-}
-
-record( stringin, "$(P)$(R)CamTypeScreen" )
-{
-	field( VAL,   "ADGenICamScreens/EuresysCamType.edl" )
-	field( PINI,  "YES" )
-}
-
