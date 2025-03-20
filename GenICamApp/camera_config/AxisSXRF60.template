@@ -102,3 +102,30 @@ record( calcout, "$(P)$(R)MinYCal" )
         field( OUT,  "$(P)$(R)GC_OffsetY PP MS" )
 }
 
+# Override FLNK in ADCore PV SizeX and SizeY to cause our calc record to process
+record( longout, "$(P)$(R)SizeX" )
+{
+        field( FLNK, "$(P)$(R)SizeXCal" )
+}
+
+record( longout, "$(P)$(R)SizeY" )
+{
+        field( FLNK, "$(P)$(R)SizeYCal" )
+}
+
+
+# Use calcout records to convert to GC_Width and GC_Height
+record( calcout, "$(P)$(R)SizeXCal" )
+{
+        field( INPA, "$(P)$(R)SizeX" )
+        field( CALC, "A" )
+        field( OUT,  "$(P)$(R)GC_Width PP MS" )
+}
+
+record( calcout, "$(P)$(R)SizeYCal" )
+{
+        field( INPA, "$(P)$(R)SizeY" )
+        field( CALC, "A" )
+        field( OUT,  "$(P)$(R)GC_Height PP MS" )
+}
+
