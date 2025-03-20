@@ -49,6 +49,86 @@ record( calcout, "$(P)$(R)AxisCalcAcquireTime_RBV" )
 	field( EGU,  "sec" )
 }
 
+# Override FLNK in ADGenICam PV GC_SensorWidth and GC_SensorHeight to cause our calc record to process
+record( ai, "$(P)$(R)GC_SensorWidth_RBV" )
+{
+        field( FLNK, "$(P)$(R)MaxSizeXCal_RBV" )
+}
+
+record( ai, "$(P)$(R)GC_SensorHeight_RBV" )
+{
+        field( FLNK, "$(P)$(R)MaxSizeYCal_RBV" )
+}
+
+# Use calcout records to convert SensorWidth and SensorHeight to MaxSizeX and MaxSizeY
+record(calcout, "$(P)$(R)MaxSizeXCal_RBV")
+{
+    field(INPA,  "$(P)$(R)GC_SensorWidth_RBV PP MS")
+    field(CALC, "A")
+    field(OUT, "$(P)$(R)MaxSizeX_RBV")
+}
+
+record(calcout, "$(P)$(R)MaxSizeYCal_RBV")
+{
+    field(INPA,  "$(P)$(R)GC_SensorHeight_RBV PP MS")
+    field(CALC, "A")
+    field(OUT, "$(P)$(R)MaxSizeY_RBV")
+}
+
+# Override FLNK in ADCore PV MinX and MinY to cause our calc record to process
+record( longout, "$(P)$(R)MinX" )
+{
+        field( FLNK, "$(P)$(R)MinXCal" )
+}
+
+record( longout, "$(P)$(R)MinY" )
+{
+        field( FLNK, "$(P)$(R)MinYCal" )
+}
+
+
+# Use calcout records to convert to GC_OffsetX and GC_OffsetY
+record( calcout, "$(P)$(R)MinXCal" )
+{
+        field( INPA, "$(P)$(R)MinX" )
+        field( CALC, "A" )
+        field( OUT,  "$(P)$(R)GC_OffsetX PP MS" )
+}
+
+record( calcout, "$(P)$(R)MinYCal" )
+{
+        field( INPA, "$(P)$(R)MinY" )
+        field( CALC, "A" )
+        field( OUT,  "$(P)$(R)GC_OffsetY PP MS" )
+}
+
+# Override FLNK in ADCore PV SizeX and SizeY to cause our calc record to process
+record( longout, "$(P)$(R)SizeX" )
+{
+        field( FLNK, "$(P)$(R)SizeXCal" )
+}
+
+record( longout, "$(P)$(R)SizeY" )
+{
+        field( FLNK, "$(P)$(R)SizeYCal" )
+}
+
+
+# Use calcout records to convert to GC_Width and GC_Height
+record( calcout, "$(P)$(R)SizeXCal" )
+{
+        field( INPA, "$(P)$(R)SizeX" )
+        field( CALC, "A" )
+        field( OUT,  "$(P)$(R)GC_Width PP MS" )
+}
+
+record( calcout, "$(P)$(R)SizeYCal" )
+{
+        field( INPA, "$(P)$(R)SizeY" )
+        field( CALC, "A" )
+        field( OUT,  "$(P)$(R)GC_Height PP MS" )
+}
+
 # Override ADCore PV TriggerMode to link w/ our camera PVs
 record( mbbo, "$(P)$(R)TriggerMode" )
 {
@@ -89,3 +169,4 @@ record( mbbi, "$(P)$(R)TriggerMode_RBV" )
 	field( ONVL, "1" )	field( ONST, "External" )
 	field( TWVL, "2" )	field( TWST, "Pulse" )
 }
+
