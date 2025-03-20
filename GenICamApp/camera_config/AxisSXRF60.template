@@ -129,3 +129,43 @@ record( calcout, "$(P)$(R)SizeYCal" )
         field( OUT,  "$(P)$(R)GC_Height PP MS" )
 }
 
+# Override ADCore PV TriggerMode to link w/ our camera PVs
+record( mbbo, "$(P)$(R)TriggerMode" )
+{
+	field( DOL,  "2" )
+	field( PINI, "YES" )
+	field( ZRVL, "0" )	field( ZRST, "FreeRun" )
+	field( ONVL, "1" )	field( ONST, "External" )
+	field( TWVL, "2" )	field( TWST, "Pulse" )
+	field( FLNK, "$(P)$(R)AxisCalcAcqTrigMode" )
+}
+# Use calcout records to update both GC_AcqTrigMode and GC_TrigExpType
+# For TriggerMode FreeRun
+#	GC_AcqTrigMode=FreeRunning
+#	GC_TrigExpType=TrigTimed
+# For TriggerMode External
+#	GC_AcqTrigMode=Standard
+#	GC_TrigExpType=TrigTimed
+# For TriggerMode Pulse
+#	GC_AcqTrigMode=Standard
+#	GC_TrigExpType=TrigWidth
+record( calcout, "$(P)$(R)AxisCalcAcqTrigMode" )
+{
+	field( INPA, "$(P)$(R)TriggerMode" )
+	field( CALC, "A>0" )
+	field( OUT,  "$(P)$(R)GC_AcqTrigMode PP MS" )
+	field( FLNK, "$(P)$(R)AxisCalcTrigExpType" )
+}
+record( calcout, "$(P)$(R)AxisCalcTrigExpType" )
+{
+	field( INPA, "$(P)$(R)TriggerMode" )
+	field( CALC, "A==2" )
+	field( OUT,  "$(P)$(R)GC_TrigExpType PP MS" )
+}
+
+record( mbbi, "$(P)$(R)TriggerMode_RBV" )
+{
+	field( ZRVL, "0" )	field( ZRST, "FreeRun" )
+	field( ONVL, "1" )	field( ONST, "External" )
+	field( TWVL, "2" )	field( TWST, "Pulse" )
+}
