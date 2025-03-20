@@ -159,8 +159,11 @@ record( calcout, "$(P)$(R)AxisCalcAcqTrigMode" )
 record( calcout, "$(P)$(R)AxisCalcTrigExpType" )
 {
 	field( INPA, "$(P)$(R)TriggerMode" )
-	field( CALC, "A==2" )
+	field( CALC, "A>0" )
+        field( OCAL, "A==2" )
 	field( OUT,  "$(P)$(R)GC_TrigExpType PP MS" )
+        field( OOPT, "When Non-zero" )
+        field( DOPT, "Use OCAL" )
 }
 
 record( mbbi, "$(P)$(R)TriggerMode_RBV" )
