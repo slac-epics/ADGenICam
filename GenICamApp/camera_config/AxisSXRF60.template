@@ -48,3 +48,30 @@ record( calcout, "$(P)$(R)AxisCalcAcquireTime_RBV" )
 	field( OUT,  "$(P)$(R)AcquireTime_RBV" )
 	field( EGU,  "sec" )
 }
+
+# Override FLNK in ADGenICam PV GC_SensorWidth to cause our calc record to process
+record( ai, "$(P)$(R)GC_SensorWidth_RBV" )
+{
+        field( FLNK, "$(P)$(R)MaxSizeXCal_RBV" )
+}
+
+record( ai, "$(P)$(R)GC_SensorHeight_RBV" )
+{
+        field( FLNK, "$(P)$(R)MaxSizeYCal_RBV" )
+}
+
+# Use calcout records to convert SensorWidth to MaxSizeX
+record(calcout, "$(P)$(R)MaxSizeXCal_RBV")
+{
+    field(INPA,  "$(P)$(R)GC_SensorWidth_RBV PP MS")
+    field(CALC, "A")
+    field(OUT, "$(P)$(R)MaxSizeX_RBV")
+}
+
+record(calcout, "$(P)$(R)MaxSizeYCal_RBV")
+{
+    field(INPA,  "$(P)$(R)GC_SensorHeight_RBV PP MS")
+    field(CALC, "A")
+    field(OUT, "$(P)$(R)MaxSizeY_RBV")
+}
+
