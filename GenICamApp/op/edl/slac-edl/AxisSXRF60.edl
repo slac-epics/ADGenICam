@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 223
-y 508
+x 249
+y 407
 w 700
 h 579
 font "helvetica-medium-r-12.0"
@@ -31,8 +31,8 @@ beginObjectProperties
 major 4
 minor 4
 release 0
-x 215
-y 450
+x 216
+y 472
 w 120
 h 24
 fgColor index 14
@@ -163,7 +163,7 @@ major 4
 minor 4
 release 0
 x 350
-y 450
+y 470
 w 142
 h 24
 fgColor index 14
@@ -203,7 +203,7 @@ major 4
 minor 4
 release 0
 x 350
-y 420
+y 440
 w 142
 h 24
 fgColor index 14
@@ -236,7 +236,7 @@ major 4
 minor 4
 release 0
 x 215
-y 420
+y 440
 w 120
 h 24
 fgColor index 14
@@ -983,8 +983,8 @@ beginObjectProperties
 major 4
 minor 4
 release 0
-x 507
-y 420
+x 508
+y 440
 w 176
 h 24
 fgColor index 14
@@ -1020,7 +1020,7 @@ major 4
 minor 4
 release 0
 x 508
-y 450
+y 470
 w 176
 h 24
 fgColor index 14
@@ -1166,7 +1166,7 @@ major 4
 minor 1
 release 1
 x 352
-y 292
+y 320
 w 125
 h 20
 font "helvetica-medium-r-12.0"
@@ -1186,7 +1186,7 @@ major 4
 minor 1
 release 1
 x 352
-y 318
+y 348
 w 125
 h 20
 font "helvetica-medium-r-12.0"
@@ -1206,7 +1206,7 @@ major 4
 minor 1
 release 1
 x 352
-y 344
+y 374
 w 125
 h 20
 font "helvetica-medium-r-12.0"
@@ -1225,8 +1225,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 487
-y 292
+x 488
+y 320
 w 97
 h 20
 fgColor index 14
@@ -1245,8 +1245,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 487
-y 318
+x 488
+y 348
 w 97
 h 20
 fgColor index 14
@@ -1265,8 +1265,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 487
-y 344
+x 488
+y 374
 w 97
 h 20
 fgColor index 14
@@ -1285,10 +1285,10 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 594
-y 292
+x 596
+y 320
 w 90
-h 18
+h 20
 controlPv "$(P)$(R)GC_SensorCoolType_RBV"
 format "decimal"
 font "helvetica-medium-r-12.0"
@@ -1308,10 +1308,10 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 594
-y 318
+x 596
+y 348
 w 90
-h 18
+h 20
 controlPv "$(P)$(R)GC_SensorCooling_RBV"
 format "decimal"
 font "helvetica-medium-r-12.0"
@@ -1331,11 +1331,79 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 594
-y 344
+x 596
+y 374
 w 90
-h 18
+h 20
 controlPv "$(P)$(R)GC_AntiDew_RBV"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fgColor index 15
+bgColor index 12
+limitsFromDb
+nullColor index 32
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 292
+w 125
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "SensorTemperature"
+}
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 488
+y 292
+w 97
+h 20
+controlPv "$(P)$(R)GC_SensorTemperature"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 5
+editable
+motifWidget
+limitsFromDb
+nullColor index 32
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 596
+y 292
+w 90
+h 20
+controlPv "$(P)$(R)GC_SensorTemperature_RBV"
 format "decimal"
 font "helvetica-medium-r-12.0"
 fgColor index 15
