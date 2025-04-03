@@ -12,3 +12,5 @@ auto_settings.sav*
 O.*/
 *~
 *.swp
+*.log
+/RELEASE_SITE
