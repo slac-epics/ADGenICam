@@ -172,3 +172,15 @@ record( mbbi, "$(P)$(R)TriggerMode_RBV" )
 	field( ONVL, "1" )	field( ONST, "External" )
 	field( TWVL, "2" )	field( TWST, "Pulse" )
 }
+
+# Use calcout records to implement a software interlock for the sensor temperature
+# Operating temperature range: -55C to 60C
+record( calcout, "$(P)$(R)SensorTempMonCal" )
+{
+        field( INPA, "$(P)$(R)GC_SensorTemperature_RBV CP" )
+        field( INPB, "55" )
+        field( CALC, "A>B" )
+        field( OUT,  "$(P)$(R)GC_AcquisitionStop.PROC MS" )
+        field( OOPT, "When Non-zero" )
+}
+
