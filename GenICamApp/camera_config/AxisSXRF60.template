@@ -86,7 +86,6 @@ record( longout, "$(P)$(R)MinY" )
         field( FLNK, "$(P)$(R)MinYCal" )
 }
 
-
 # Use calcout records to convert to GC_OffsetX and GC_OffsetY
 record( calcout, "$(P)$(R)MinXCal" )
 {
@@ -112,7 +111,6 @@ record( longout, "$(P)$(R)SizeY" )
 {
         field( FLNK, "$(P)$(R)SizeYCal" )
 }
-
 
 # Use calcout records to convert to GC_Width and GC_Height
 record( calcout, "$(P)$(R)SizeXCal" )
@@ -184,8 +182,29 @@ record( calcout, "$(P)$(R)SensorTempMonCal" )
         field( OOPT, "When Non-zero" )
 }
 
-# Add EGU for the GC_SensorTemperature_RBV
+# Add EGU and SCAN field for the GC_SensorTemperature_RBV
 record ( ai, "$(P)$(R)GC_SensorTemperature_RBV" )
 {
        field( EGU, "C" )
+       field( SCAN, "1 second" )
 }
+
+# Add EGU and SCAN field for the GC_DeviceTemperature_RBV
+record ( ai, "$(P)$(R)GC_DeviceTemperature_RBV" )
+{
+       field( EGU, "C" )
+       field( SCAN, "1 second" )
+}
+
+# When the Acquire PV is activated, set ReadStatus.SCAN to Passive.
+# When the Acquire PV is deactivated, set ReadStatus.SCAN to 1 second
+# to prevent scanning from overloading the CPU.
+record(calcout, "$(P)$(R)AcquireToScanCal")
+{
+    field(INPA,  "$(P)$(R)Acquire CP")
+# If Acquire is Done, ReadScanStatus.SCAN is 6 (1 second). If Acquire is Acquire, ReadScanStatus.Scan is 0 (Passive).
+    field(CALC, "A=0?6:0")
+    field(OUT, "$(P)$(R)ReadStatus.SCAN PP")
+    filed(SCAN, "Passive")
+}
+
