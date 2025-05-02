@@ -4,19 +4,19 @@
 # to generate the features database template file and gui files.
 file Tucsen_CXP_Dhyana6060BSI.template
 {
-	{
-		P				= "\$(P)",
-		R				= "\$(R)",
-		PORT			= "\$(PORT)",
-	}
+    {
+        P               = "\$(P)",
+        R               = "\$(R)",
+        PORT            = "\$(PORT)",
+    }
 }
 
 file AxisSXRF60.template
 {
-        {
-                P                               = "\$(P)",
-                R                               = "\$(R)",
-                PORT                    = "\$(PORT)",
-        }
+    {
+        P               = "\$(P)",
+        R               = "\$(R)",
+        PORT            = "\$(PORT)",
+    }
 }
 

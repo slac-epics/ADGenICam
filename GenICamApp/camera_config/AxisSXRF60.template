@@ -208,3 +208,65 @@ record(calcout, "$(P)$(R)AcquireToScanCal")
     field(SCAN, "Passive")
 }
 
+# BinX and BinY
+# Axis SXRF60 has 3 binning modes via PV GC_Binning
+#	0	BinOff
+#	1	Bin2x2Sum
+#	2	Bin4x4Sum
+#
+record( longout, "$(P)$(R)BinX" )
+{
+field( TPRO, "2" )
+	field( DOL,  "1" )
+	field( FLNK, "$(P)$(R)BinX_CalcGC" )
+	field( HOPR, "4" )
+	field( LOPR, "1" )
+}
+record( calcout, "$(P)$(R)BinX_CalcGC" )
+{
+field( TPRO, "2" )
+	field( INPA, "$(P)$(R)BinX" )
+	field( CALC, "(A==1)?0:((A==4)?2:1)" )
+	field( OUT,  "$(P)$(R)GC_Binning CP MS" )
+	field( OOPT, "On Change" )
+}
+record( longout, "$(P)$(R)BinY" )
+{
+field( TPRO, "2" )
+	field( DOL,  "1" )
+	field( FLNK, "$(P)$(R)BinY_CalcGC" )
+	field( HOPR, "4" )
+	field( LOPR, "1" )
+}
+record( calcout, "$(P)$(R)BinY_CalcGC" )
+{
+field( TPRO, "2" )
+	field( INPA, "$(P)$(R)BinY" )
+	field( CALC, "(A==1)?0:((A==4)?2:1)" )
+	field( OUT,  "$(P)$(R)GC_Binning CP MS" )
+	field( OOPT, "On Change" )
+}
+record( mbbo, "$(P)$(R)GC_Binning" )
+{
+field( TPRO, "2" )
+}
+record( mbbi, "$(P)$(R)GC_Binning_RBV" )
+{
+field( TPRO, "2" )
+}
+record( calcout, "$(P)$(R)CalcBinX_RBV" )
+{
+field( TPRO, "2" )
+	field( INPA, "$(P)$(R)GC_Binning_RBV CP MS" )
+	field( CALC, "(A==0)?1:((A==1)?2:4)" )
+	field( OUT,  "$(P)$(R)BinX CP MS" )
+	field( OOPT, "On Change" )
+}
+record( calcout, "$(P)$(R)CalcBinY_RBV" )
+{
+field( TPRO, "2" )
+	field( INPA, "$(P)$(R)GC_Binning_RBV CP MS" )
+	field( CALC, "(A==0)?1:((A==1)?2:4)" )
+	field( OUT,  "$(P)$(R)BinY CP MS" )
+	field( OOPT, "On Change" )
+}
