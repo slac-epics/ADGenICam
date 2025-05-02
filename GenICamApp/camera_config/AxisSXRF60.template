@@ -216,7 +216,6 @@ record(calcout, "$(P)$(R)AcquireToScanCal")
 #
 record( longout, "$(P)$(R)BinX" )
 {
-field( TPRO, "2" )
 	field( DOL,  "1" )
 	field( FLNK, "$(P)$(R)BinX_CalcGC" )
 	field( HOPR, "4" )
@@ -224,7 +223,6 @@ field( TPRO, "2" )
 }
 record( calcout, "$(P)$(R)BinX_CalcGC" )
 {
-field( TPRO, "2" )
 	field( INPA, "$(P)$(R)BinX" )
 	field( CALC, "(A==1)?0:((A==4)?2:1)" )
 	field( OUT,  "$(P)$(R)GC_Binning CP MS" )
@@ -232,7 +230,6 @@ field( TPRO, "2" )
 }
 record( longout, "$(P)$(R)BinY" )
 {
-field( TPRO, "2" )
 	field( DOL,  "1" )
 	field( FLNK, "$(P)$(R)BinY_CalcGC" )
 	field( HOPR, "4" )
@@ -240,23 +237,13 @@ field( TPRO, "2" )
 }
 record( calcout, "$(P)$(R)BinY_CalcGC" )
 {
-field( TPRO, "2" )
 	field( INPA, "$(P)$(R)BinY" )
 	field( CALC, "(A==1)?0:((A==4)?2:1)" )
 	field( OUT,  "$(P)$(R)GC_Binning CP MS" )
 	field( OOPT, "On Change" )
 }
-record( mbbo, "$(P)$(R)GC_Binning" )
-{
-field( TPRO, "2" )
-}
-record( mbbi, "$(P)$(R)GC_Binning_RBV" )
-{
-field( TPRO, "2" )
-}
 record( calcout, "$(P)$(R)CalcBinX_RBV" )
 {
-field( TPRO, "2" )
 	field( INPA, "$(P)$(R)GC_Binning_RBV CP MS" )
 	field( CALC, "(A==0)?1:((A==1)?2:4)" )
 	field( OUT,  "$(P)$(R)BinX CP MS" )
@@ -264,7 +251,6 @@ field( TPRO, "2" )
 }
 record( calcout, "$(P)$(R)CalcBinY_RBV" )
 {
-field( TPRO, "2" )
 	field( INPA, "$(P)$(R)GC_Binning_RBV CP MS" )
 	field( CALC, "(A==0)?1:((A==1)?2:4)" )
 	field( OUT,  "$(P)$(R)BinY CP MS" )
