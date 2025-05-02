@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 254
-y 436
+x 1121
+y 1680
 w 700
 h 579
 font "helvetica-medium-r-12.0"
@@ -92,57 +92,9 @@ minor 7
 release 0
 x 144
 y 4
-w 176
+w 184
 h 20
 controlPv "$(P)$(R)Model_RBV"
-font "helvetica-medium-r-12.0"
-fontAlign "center"
-fgColor index 15
-fgAlarm
-bgColor index 12
-limitsFromDb
-nullColor index 25
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 144
-y 32
-w 176
-h 20
-controlPv "$(P)$(R)OpalInfo_RBV"
-font "helvetica-medium-r-12.0"
-fontAlign "center"
-fgColor index 15
-fgAlarm
-bgColor index 12
-limitsFromDb
-nullColor index 25
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 144
-y 116
-w 176
-h 20
-controlPv "$(P)$(R)OpalBuildState_RBV"
 font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 15
@@ -324,119 +276,6 @@ bgColor index 3
 value {
   "Test Pattern"
 }
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 432
-y 112
-w 252
-h 20
-controlPv "$(P)$(R)OpalLastError_RBV"
-format "exponential"
-font "helvetica-medium-r-12.0"
-fgColor index 15
-fgAlarm
-bgColor index 12
-limitsFromDb
-nullColor index 25
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 352
-y 112
-w 64
-h 20
-font "helvetica-medium-r-12.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 3
-value {
-  "Last Error"
-}
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 594
-y 140
-w 90
-h 20
-controlPv "$(P)$(R)OpalElapsedTime_RBV"
-format "exponential"
-font "helvetica-medium-r-12.0"
-fontAlign "center"
-fgColor index 15
-fgAlarm
-bgColor index 12
-limitsFromDb
-nullColor index 40
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-noExecuteClipMask
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 352
-y 140
-w 232
-h 20
-font "helvetica-medium-r-12.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 3
-value {
-  "Elapsed Time (Hrs/65536;Hrs%65536)"
-}
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 144
-y 88
-w 176
-h 20
-controlPv "$(P)$(R)OpalFirmwareTimestamp_RBV"
-font "helvetica-medium-r-12.0"
-fontAlign "center"
-fgColor index 15
-fgAlarm
-bgColor index 12
-limitsFromDb
-nullColor index 40
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
@@ -627,33 +466,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 144
-y 60
-w 176
-h 20
-controlPv "$(P)$(R)OpalSerialNumber_RBV"
-font "helvetica-medium-r-12.0"
-fontAlign "center"
-fgColor index 15
-fgAlarm
-bgColor index 12
-limitsFromDb
-nullColor index 25
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
 x 212
 y 164
-w 108
+w 112
 h 20
 controlPv "$(P)$(R)GC_SensorPixelSize_RBV"
 font "helvetica-medium-r-12.0"
@@ -685,32 +500,8 @@ fontAlign "right"
 fgColor index 14
 bgColor index 3
 value {
-  "Bits Per Pixel"
+  "SensorPixelSize"
 }
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 212
-y 216
-w 108
-h 20
-controlPv "$(P)$(R)OpalModelID_RBV"
-font "helvetica-medium-r-12.0"
-fontAlign "center"
-fgColor index 15
-fgAlarm
-bgColor index 12
-limitsFromDb
-nullColor index 25
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
 endObjectProperties
 
 # (Static Text)
@@ -774,98 +565,6 @@ bgColor index 3
 value {
   "Device Temperature"
 }
-endObjectProperties
-
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 4
-y 32
-w 136
-h 20
-fgColor index 14
-onColor index 6
-offColor index 3
-topShadowColor index 1
-botShadowColor index 11
-controlPv "$(P)$(R)OpalInfo_RBV.PROC"
-pressValue "1"
-onLabel "Rereading Info..."
-offLabel "Camera Info"
-3d
-font "helvetica-medium-r-12.0"
-endObjectProperties
-
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 4
-y 60
-w 136
-h 20
-fgColor index 14
-onColor index 6
-offColor index 3
-topShadowColor index 1
-botShadowColor index 11
-controlPv "$(P)$(R)OpalSerialNumber_RBV.PROC"
-pressValue "1"
-onLabel "Rereading S/N..."
-offLabel "Camera Serial Number"
-3d
-font "helvetica-medium-r-12.0"
-endObjectProperties
-
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 4
-y 88
-w 136
-h 20
-fgColor index 14
-onColor index 6
-offColor index 3
-topShadowColor index 1
-botShadowColor index 11
-controlPv "$(P)$(R)OpalFirmwareTimestamp_RBV.PROC"
-pressValue "1"
-onLabel "Rereading FW TS..."
-offLabel "Cam Firmware Timestamp"
-3d
-font "helvetica-medium-r-12.0"
-endObjectProperties
-
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 4
-y 116
-w 136
-h 20
-fgColor index 14
-onColor index 6
-offColor index 3
-topShadowColor index 1
-botShadowColor index 11
-controlPv "$(P)$(R)OpalBuildState_RBV.PROC"
-pressValue "1"
-onLabel "Rereading FW BuildState..."
-offLabel "Cam Build State Versions"
-3d
-font "helvetica-medium-r-12.0"
 endObjectProperties
 
 # (Text Monitor)
@@ -1368,31 +1067,6 @@ value {
 }
 endObjectProperties
 
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 488
-y 292
-w 97
-h 20
-controlPv "$(P)$(R)GC_SensorTemperature"
-format "decimal"
-font "helvetica-medium-r-12.0"
-fgColor index 25
-bgColor index 5
-editable
-motifWidget
-limitsFromDb
-nullColor index 32
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
@@ -1414,5 +1088,200 @@ smartRefresh
 fastUpdate
 newPos
 objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 224
+y 36
+w 104
+h 20
+controlPv "$(P)$(R)GC_GainMode_RBV"
+format "decimal"
+font "helvetica-medium-r-14.0"
+fgColor index 15
+bgColor index 12
+limitsFromDb
+nullColor index 32
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 116
+y 36
+w 104
+h 20
+fgColor index 14
+bgColor index 51
+inconsistentColor index 12
+topShadowColor index 2
+botShadowColor index 12
+controlPv "$(P)$(R)GC_GainMode"
+indicatorPv "$(P)$(R)GC_GainMode"
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 4
+y 36
+w 108
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "GainMode"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 212
+y 216
+w 112
+h 20
+controlPv "$(P)$(R)GC_DeviceModelName_RBV"
+format "decimal"
+font "helvetica-medium-r-14.0"
+fgColor index 15
+bgColor index 12
+limitsFromDb
+nullColor index 32
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 592
+y 252
+w 92
+h 20
+controlPv "$(P)$(R)GC_BlackLevel_RBV"
+format "decimal"
+font "helvetica-medium-r-14.0"
+fgColor index 15
+bgColor index 12
+limitsFromDb
+nullColor index 32
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 488
+y 252
+w 96
+h 20
+controlPv "$(P)$(R)GC_BlackLevel"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fgColor index 25
+bgColor index 5
+editable
+motifWidget
+limitsFromDb
+nullColor index 32
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 348
+y 252
+w 128
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+value {
+  "BlackLevel"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 224
+y 60
+w 104
+h 20
+controlPv "$(P)$(R)GC_AcqFrameRate_RBV"
+format "decimal"
+font "helvetica-medium-r-14.0"
+fgColor index 15
+bgColor index 12
+limitsFromDb
+nullColor index 32
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 44
+y 60
+w 176
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+value {
+  "Max FrameRate"
+}
 endObjectProperties
 
