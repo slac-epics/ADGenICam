@@ -27,6 +27,7 @@ public:
     ADGenICam(const char *portName, size_t maxMemory, int priority, int stackSize);
 
     // virtual methods to override from ADDriver
+	virtual asynStatus readFloat64( asynUser *pasynUser, epicsFloat64 *value);
     virtual asynStatus writeInt32( asynUser *pasynUser, epicsInt32 value);
     virtual asynStatus writeInt64( asynUser *pasynUser, epicsInt64 value);
     virtual asynStatus writeFloat64( asynUser *pasynUser, epicsFloat64 value);

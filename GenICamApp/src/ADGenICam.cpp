@@ -85,6 +85,25 @@ ADGenICam::ADGenICam(const char *portName, size_t maxMemory, int priority, int s
   * Takes action if the function code requires it.  ADAcquire, ADSizeX, and many other
   * function codes make calls to the underlying library from this function. */
 
+asynStatus ADGenICam::readFloat64( asynUser *pasynUser, epicsFloat64 *value)
+{
+    asynStatus status = asynSuccess;
+    int function = pasynUser->reason;
+    static const char *functionName = "readFloat64";
+
+    GenICamFeature *pFeature = mGCFeatureSet.getByIndex(function);
+    if (pFeature) {
+        pFeature->read(value, true);
+    }
+
+    asynPrint(pasynUserSelf, ASYN_TRACEIO_DRIVER,
+        "%s::%s function=%d, value=%f, status=%d\n",
+        driverName, functionName, function, *value, status);
+
+    callParamCallbacks();
+    return status;
+}
+
 asynStatus ADGenICam::writeInt32( asynUser *pasynUser, epicsInt32 value)
 {
     asynStatus status = asynSuccess;
