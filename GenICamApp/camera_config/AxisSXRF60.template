@@ -256,3 +256,15 @@ record( calcout, "$(P)$(R)CalcBinY_RBV" )
 	field( OUT,  "$(P)$(R)BinY CP MS" )
 	field( OOPT, "On Change" )
 }
+
+# Override DISA field not to be shown in display
+record( ao, "$(P)$(R)Gain" )
+{
+        field( DISA,  1 )
+}
+
+record( ai, "$(P)$(R)Gain_RBV" )
+{
+        field( DISA,  1 )
+}
+
