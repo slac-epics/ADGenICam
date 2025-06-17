@@ -57,6 +57,7 @@ record(stringout, "$(P)$(R)GC_DeviceUserID") {
   field(DTYP, "asynOctetWrite")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_S_DeviceUserID")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC TSE PINI VAL")
 }
 
@@ -72,6 +73,7 @@ record(ao, "$(P)$(R)GC_SensorWidth") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_SensorWidth")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -87,6 +89,7 @@ record(ao, "$(P)$(R)GC_SensorHeight") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_SensorHeight")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -102,6 +105,7 @@ record(ao, "$(P)$(R)GC_Width") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_Width")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -117,6 +121,7 @@ record(ao, "$(P)$(R)GC_Height") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_Height")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -132,6 +137,7 @@ record(ao, "$(P)$(R)GC_DecHorizontal") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_DecimationHorizontal")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -147,6 +153,7 @@ record(ao, "$(P)$(R)GC_DecVertical") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_DecimationVertical")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -171,6 +178,7 @@ record(mbbo, "$(P)$(R)GC_PixelFormat") {
   field(ONST, "Mono16")
   field(ONVL, "17825799")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -269,6 +277,7 @@ record(mbbo, "$(P)$(R)GC_TestImageSelector") {
   field(ONST, "IPEngineTestPatt")
   field(ONVL, "2147483648")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -284,6 +293,7 @@ record(ao, "$(P)$(R)GC_OffsetX") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_OffsetX")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -299,6 +309,7 @@ record(ao, "$(P)$(R)GC_OffsetY") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_OffsetY")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -343,6 +354,7 @@ record(mbbo, "$(P)$(R)GC_AcquisitionMode") {
   field(SXST, "SingleFrameReado")
   field(SXVL, "6")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -416,6 +428,7 @@ record(ao, "$(P)$(R)GC_GevIntSelector") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevInterfaceSelector")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -489,6 +502,7 @@ record(bo, "$(P)$(R)GC_GevCurIPConLLA") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -508,6 +522,7 @@ record(bo, "$(P)$(R)GC_GevCurIPConDHCP") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -527,6 +542,7 @@ record(bo, "$(P)$(R)GC_GevCurIPConPerIP") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -590,6 +606,7 @@ record(ao, "$(P)$(R)GC_GevPerIPAddress") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevPersistentIPAddress")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -605,6 +622,7 @@ record(ao, "$(P)$(R)GC_GevPerSubnetMask") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevPersistentSubnetMask")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -620,6 +638,7 @@ record(ao, "$(P)$(R)GC_GevPerDefGateway") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevPersistentDefaultGateway")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -721,6 +740,7 @@ record(ao, "$(P)$(R)GC_GevHeaTimeout") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevHeartbeatTimeout")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -766,6 +786,7 @@ record(ao, "$(P)$(R)GC_GevTimControl") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevTimestampControl")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -824,6 +845,7 @@ record(mbbo, "$(P)$(R)GC_GevCCP") {
   field(TWST, "ControlAccess")
   field(TWVL, "2")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -839,6 +861,7 @@ record(ao, "$(P)$(R)GC_GevMCPHostPort") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevMCPHostPort")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -854,6 +877,7 @@ record(ao, "$(P)$(R)GC_GevMCDA") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevMCDA")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -869,6 +893,7 @@ record(ao, "$(P)$(R)GC_GevMCTT") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevMCTT")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -884,6 +909,7 @@ record(ao, "$(P)$(R)GC_GevMCRC") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevMCRC")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -899,6 +925,7 @@ record(ao, "$(P)$(R)GC_GevStrChaSelector") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevStreamChannelSelector")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -914,6 +941,7 @@ record(ao, "$(P)$(R)GC_GevSCPIntIndex") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevSCPInterfaceIndex")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -929,6 +957,7 @@ record(ao, "$(P)$(R)GC_GevSCPHostPort") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevSCPHostPort")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -948,6 +977,7 @@ record(bo, "$(P)$(R)GC_GevSCPSFirTesPac") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -967,6 +997,7 @@ record(bo, "$(P)$(R)GC_GevSCPSDoNotFra") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -986,6 +1017,7 @@ record(bo, "$(P)$(R)GC_GevSCPSBigEndian") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -1001,6 +1033,7 @@ record(ao, "$(P)$(R)GC_GevSCPSPacketSize") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevSCPSPacketSize")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1016,6 +1049,7 @@ record(ao, "$(P)$(R)GC_GevSCPD") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevSCPD")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1031,6 +1065,7 @@ record(ao, "$(P)$(R)GC_GevSCDA") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_GevSCDA")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1046,6 +1081,7 @@ record(ao, "$(P)$(R)GC_TLParamsLocked") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_TLParamsLocked")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 

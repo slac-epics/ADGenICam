@@ -182,6 +182,7 @@ record(mbbo, "$(P)$(R)GC_ImageFormatSource") {
   field(ONST, "DataStream")
   field(ONVL, "1")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -262,6 +263,7 @@ record(mbbo, "$(P)$(R)GC_RemotePixelFormat") {
   field(FFST, "RGB10pmsb")
   field(FFVL, "1026")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -277,6 +279,7 @@ record(ao, "$(P)$(R)GC_RemoteWidth") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_RemoteWidth")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -292,6 +295,7 @@ record(ao, "$(P)$(R)GC_RemoteHeight") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_RemoteHeight")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -311,6 +315,7 @@ record(bo, "$(P)$(R)GC_ReverseX") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -347,6 +352,7 @@ record(mbbo, "$(P)$(R)GC_StrBufHanMode") {
   field(ZRST, "Default")
   field(ZRVL, "0")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -375,6 +381,7 @@ record(mbbo, "$(P)$(R)GC_StrAcqModSelector") {
   field(ZRST, "Default")
   field(ZRVL, "0")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -399,6 +406,7 @@ record(mbbo, "$(P)$(R)GC_BufAllAliControl") {
   field(ONST, "Enable")
   field(ONVL, "1")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -414,6 +422,7 @@ record(ao, "$(P)$(R)GC_BufAllAlignment") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BufferAllocationAlignment")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -438,6 +447,7 @@ record(mbbo, "$(P)$(R)GC_BufferFilledRule") {
   field(ONST, "ContinueInNextBu")
   field(ONVL, "1")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -462,6 +472,7 @@ record(mbbo, "$(P)$(R)GC_BufferInfoSource") {
   field(ONST, "DataStream")
   field(ONVL, "1")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -477,6 +488,7 @@ record(ao, "$(P)$(R)GC_BufferInfoWidth") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BufferInfoWidth")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -492,6 +504,7 @@ record(ao, "$(P)$(R)GC_BufferInfoHeight") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BufferInfoHeight")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -572,6 +585,7 @@ record(mbbo, "$(P)$(R)GC_BufInfPixelFormat") {
   field(FFST, "BayerRG10pmsb")
   field(FFVL, "802")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -600,6 +614,7 @@ record(mbbo, "$(P)$(R)GC_UnpackingMode") {
   field(TWST, "Off")
   field(TWVL, "2")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -619,6 +634,7 @@ record(bo, "$(P)$(R)GC_RedBlueSwap") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -643,6 +659,7 @@ record(mbbo, "$(P)$(R)GC_ImageScaling") {
   field(ONST, "Scaling_1_8")
   field(ONVL, "2")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -658,6 +675,7 @@ record(ao, "$(P)$(R)GC_JpegQuality") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_JpegQuality")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -694,6 +712,7 @@ record(mbbo, "$(P)$(R)GC_BinningMethod") {
   field(FRST, "Mean_4x4")
   field(FRVL, "15")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -774,6 +793,7 @@ record(mbbo, "$(P)$(R)GC_StaOfScaTriSource") {
   field(FFST, "MDV2")
   field(FFVL, "12")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -854,6 +874,7 @@ record(mbbo, "$(P)$(R)GC_EndOfScaTriSource") {
   field(FFST, "MDV2")
   field(FFVL, "12")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -869,6 +890,7 @@ record(ao, "$(P)$(R)GC_ScanLength") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_ScanLength")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -884,6 +906,7 @@ record(ao, "$(P)$(R)GC_BufferHeight") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BufferHeight")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -926,6 +949,7 @@ record(mbbo, "$(P)$(R)GC_DmaEngOpt") {
   field(ONST, "LowMemoryUsage")
   field(ONVL, "1")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -941,6 +965,7 @@ record(ao, "$(P)$(R)GC_DmaEngMaxQueSize") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_DmaEngineMaxQueueSize")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -956,6 +981,7 @@ record(ao, "$(P)$(R)GC_TriToCamReaTim") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_TriggerToCameraReadoutTimeout")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -971,6 +997,7 @@ record(ao, "$(P)$(R)GC_CamReadoutTimeout") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_CameraReadoutTimeout")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -986,6 +1013,7 @@ record(ao, "$(P)$(R)GC_LineWidth") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_LineWidth")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1001,6 +1029,7 @@ record(ao, "$(P)$(R)GC_LinePitch") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_LinePitch")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1016,6 +1045,7 @@ record(ao, "$(P)$(R)GC_StripeHeight") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_StripeHeight")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1031,6 +1061,7 @@ record(ao, "$(P)$(R)GC_StripePitch") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_StripePitch")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1046,6 +1077,7 @@ record(ao, "$(P)$(R)GC_BlockHeight") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BlockHeight")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1061,6 +1093,7 @@ record(ao, "$(P)$(R)GC_StripeOffset") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_StripeOffset")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1093,6 +1126,7 @@ record(mbbo, "$(P)$(R)GC_StripeArrangement") {
   field(THST, "Geometry_1X_2YM")
   field(THVL, "4")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1108,6 +1142,7 @@ record(ao, "$(P)$(R)GC_BufferPartCount") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BufferPartCount")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1142,6 +1177,7 @@ record(mbbo, "$(P)$(R)GC_DeviceTapGeometry") {
   field(TWST, "Geometry_1X_2YE")
   field(TWVL, "2")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1157,6 +1193,7 @@ record(ao, "$(P)$(R)GC_Image1StreamID") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_Image1StreamID")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1172,6 +1209,7 @@ record(ao, "$(P)$(R)GC_Image2StreamID") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_Image2StreamID")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1187,6 +1225,7 @@ record(ao, "$(P)$(R)GC_SynMarBusAddress") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_SyncMarkerBusAddress")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1202,6 +1241,7 @@ record(ao, "$(P)$(R)GC_SyncMarkerValue") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_SyncMarkerValue")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1217,6 +1257,7 @@ record(ao, "$(P)$(R)GC_SynMarValInc") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_SyncMarkerValueIncrement")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1297,6 +1338,7 @@ record(mbbo, "$(P)$(R)GC_ErrorSelector") {
   field(FFST, "PacketWithUnexpe")
   field(FFVL, "11")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1355,6 +1397,7 @@ record(mbbo, "$(P)$(R)GC_LUTConfiguration") {
   field(SXST, "M_12x16")
   field(SXVL, "72")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1451,6 +1494,7 @@ record(mbbo, "$(P)$(R)GC_LUTSet") {
   field(FFST, "Set16")
   field(FFVL, "16")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1466,6 +1510,7 @@ record(ao, "$(P)$(R)GC_LUTIndex") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_LUTIndex")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1481,6 +1526,7 @@ record(stringout, "$(P)$(R)GC_LUTValue") {
   field(DTYP, "asynOctetWrite")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_S_LUTValue")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC TSE PINI VAL")
 }
 
@@ -1496,6 +1542,7 @@ record(ao, "$(P)$(R)GC_LUTReaBlockLength") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_LUTReadBlockLength")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1576,6 +1623,7 @@ record(mbbo, "$(P)$(R)GC_LUTEnable") {
   field(FFST, "Set15")
   field(FFVL, "15")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1600,6 +1648,7 @@ record(mbbo, "$(P)$(R)GC_LinFilterControl") {
   field(ONST, "Enable")
   field(ONVL, "1")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1615,6 +1664,7 @@ record(ao, "$(P)$(R)GC_LinFilCoeA") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_LinearFilterCoefficientA")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1630,6 +1680,7 @@ record(ao, "$(P)$(R)GC_LinFilCoeB") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_LinearFilterCoefficientB")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1645,6 +1696,7 @@ record(ao, "$(P)$(R)GC_LinFilCoeC") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_LinearFilterCoefficientC")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1669,6 +1721,7 @@ record(mbbo, "$(P)$(R)GC_ThresholdControl") {
   field(ONST, "Enable")
   field(ONVL, "1")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1684,6 +1737,7 @@ record(ao, "$(P)$(R)GC_ThresholdLevel") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_ThresholdLevel")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1728,6 +1782,7 @@ record(mbbo, "$(P)$(R)GC_ScaExtMethod") {
   field(SXST, "CenterOfGravity_")
   field(SXVL, "8")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1748,6 +1803,7 @@ record(mbbo, "$(P)$(R)GC_Scan3dOutputMode") {
   field(ZRST, "UncalibratedC")
   field(ZRVL, "0")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1763,6 +1819,7 @@ record(ao, "$(P)$(R)GC_ScaSecLinROIOffY") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_Scan3dSecondLineROIOffsetY")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -1799,6 +1856,7 @@ record(mbbo, "$(P)$(R)GC_BayerMethod") {
   field(FRST, "Method5")
   field(FRVL, "5")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1839,6 +1897,7 @@ record(mbbo, "$(P)$(R)GC_FfcControl") {
   field(ONST, "Enable")
   field(ONVL, "1")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1863,6 +1922,7 @@ record(mbbo, "$(P)$(R)GC_FfcBypass") {
   field(ONST, "Enable")
   field(ONVL, "1")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1892,6 +1952,7 @@ record(bo, "$(P)$(R)GC_BufMetInsEnable") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -1911,6 +1972,7 @@ record(bo, "$(P)$(R)GC_LinMetInsEnable") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -1939,6 +2001,7 @@ record(mbbo, "$(P)$(R)GC_MetadataContent0") {
   field(TWST, "QDC1Position")
   field(TWVL, "3")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1967,6 +2030,7 @@ record(mbbo, "$(P)$(R)GC_MetadataContent1") {
   field(TWST, "QDC2Position")
   field(TWVL, "3")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -1999,6 +2063,7 @@ record(mbbo, "$(P)$(R)GC_MetadataContent2") {
   field(THST, "LineStatusAllHi")
   field(THVL, "4")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -2031,6 +2096,7 @@ record(mbbo, "$(P)$(R)GC_MetadataContent3") {
   field(THST, "LineStatusAll")
   field(THVL, "4")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -2063,6 +2129,7 @@ record(mbbo, "$(P)$(R)GC_GenPurCouSelector") {
   field(THST, "GPC4")
   field(THVL, "4")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -2082,6 +2149,7 @@ record(bo, "$(P)$(R)GC_GenPurCouEnable") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -2162,6 +2230,7 @@ record(mbbo, "$(P)$(R)GC_GenPurCouIncSou") {
   field(FFST, "MDV3")
   field(FFVL, "27")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -2242,6 +2311,7 @@ record(mbbo, "$(P)$(R)GC_GenPurCouDecSou") {
   field(FFST, "MDV3")
   field(FFVL, "27")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -2322,6 +2392,7 @@ record(mbbo, "$(P)$(R)GC_GenPurCouLatAndRe") {
   field(FFST, "MDV3")
   field(FFVL, "27")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -2374,6 +2445,7 @@ record(mbbo, "$(P)$(R)GC_EventSelector") {
   field(EIST, "BrokenFrame")
   field(EIVL, "32873")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -2393,6 +2465,7 @@ record(bo, "$(P)$(R)GC_EventNotification") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -2473,6 +2546,7 @@ record(mbbo, "$(P)$(R)GC_EveNotContext1") {
   field(FFST, "LIN8EventCount")
   field(FFVL, "32775")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -2553,6 +2627,7 @@ record(mbbo, "$(P)$(R)GC_EveNotContext2") {
   field(FFST, "LIN8EventCount")
   field(FFVL, "32775")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -2633,6 +2708,7 @@ record(mbbo, "$(P)$(R)GC_EveNotContext3") {
   field(FFST, "LIN8EventCount")
   field(FFVL, "32775")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -2666,6 +2742,7 @@ record(bo, "$(P)$(R)GC_EveNotAll") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -2720,6 +2797,7 @@ record(mbbo, "$(P)$(R)GC_StaSamSelector") {
   field(SVST, "Custom")
   field(SVVL, "9")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -2747,6 +2825,7 @@ record(ao, "$(P)$(R)GC_FlipBit") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_FlipBit")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -2766,6 +2845,7 @@ record(bo, "$(P)$(R)GC_BufAlrAnnCheck") {
   field(ZNAM, "No")
   field(ONAM, "Yes")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZSV OSV TSE PINI VAL")
 }
 
@@ -2781,6 +2861,7 @@ record(ao, "$(P)$(R)GC_DmaDesMaxBytCount") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_DmaDescriptorMaxByteCount")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -2796,6 +2877,7 @@ record(ao, "$(P)$(R)GC_MemAllOptions") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_MemoryAllocationOptions")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
@@ -2811,6 +2893,7 @@ record(ao, "$(P)$(R)GC_PCIeConMemorySize") {
   field(DTYP, "asynInt64")
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_PCIeConsistentMemorySize")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 

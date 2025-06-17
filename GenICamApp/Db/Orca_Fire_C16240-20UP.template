@@ -22,6 +22,7 @@ record(mbbo, "$(P)$(R)GC_DeviceScanType") {
   field(ZRST, "Areascan")
   field(ZRVL, "0x00000000")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -72,6 +73,7 @@ record(mbbo, "$(P)$(R)GC_TapGeometry") {
   field(ZRST, "Cxp_1x_1y")
   field(ZRVL, "0")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -92,6 +94,7 @@ record(mbbo, "$(P)$(R)GC_Img1StreamId") {
   field(ZRST, "Stream1Id")
   field(ZRVL, "1")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -112,6 +115,7 @@ record(mbbo, "$(P)$(R)GC_AcquisitionMode") {
   field(ZRST, "Continuous")
   field(ZRVL, "0x00000001")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL")
 }
 
@@ -141,6 +145,7 @@ record(ao, "$(P)$(R)GC_ExposureTime") {
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_D_ExposureTime")
   field(PREC, "3")
   field(DISA, "0")
+  field(PINI, "YES")
   info(autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL")
 }
 
