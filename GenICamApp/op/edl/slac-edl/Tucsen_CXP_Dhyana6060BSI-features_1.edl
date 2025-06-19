@@ -3874,26 +3874,6 @@ value {
 }
 endObjectProperties
 
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 980
-y 700
-w 220
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 3
-useDisplayBg
-value {
-  "FactoryDefault"
-}
-endObjectProperties
-
 # (Message Button)
 object activeMessageButtonClass
 beginObjectProperties
@@ -4449,30 +4429,6 @@ controlPv "$(P)$(R)GC_ParameterSave.PROC"
 pressValue "1"
 onLabel "ParameterSave"
 offLabel "ParameterSave"
-3d
-useEnumNumeric
-font "helvetica-medium-r-12.0"
-endObjectProperties
-
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 1205
-y 700
-w 200
-h 20
-fgColor index 14
-onColor index 51
-offColor index 51
-topShadowColor index 0
-botShadowColor index 14
-controlPv "$(P)$(R)GC_FactoryDefault.PROC"
-pressValue "1"
-onLabel "FactoryDefault"
-offLabel "FactoryDefault"
 3d
 useEnumNumeric
 font "helvetica-medium-r-12.0"
