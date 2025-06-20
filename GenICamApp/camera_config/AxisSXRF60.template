@@ -14,6 +14,21 @@ record( stringin, "$(P)$(R)CamModelScreen" )
 	field( PINI,  "YES" )
 }
 
+record( ao, "$(P)$(R)GC_SetSenTemperature" )
+{
+        field( PINI,  "YES" )
+}
+
+record( mbbo, "$(P)$(R)GC_SensorCoolType" )
+{
+        field( PINI,  "YES" )
+}
+
+record( mbbo, "$(P)$(R)GC_GainMode" )
+{
+        field( PINI,  "YES" )
+}
+
 # Override FLNK in ADCore PV AcquireTime to cause our calc record to process
 record( ao, "$(P)$(R)AcquireTime" )
 {
