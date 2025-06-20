@@ -143,6 +143,10 @@ asynStatus ADGenICam::writeInt32( asynUser *pasynUser, epicsInt32 value)
              (function == ADMinY)        ||
              (function == ADBinX)        ||
              (function == ADBinY)) {
+		if (acquiring) {
+			status = stopCapture();
+			asynPrint(pasynUserSelf, ASYN_TRACEIO_DRIVER, "%s%s: called stopCapture() for ROI change\n", driverName, functionName);
+		}
         status = setImageParams();
     }
     else if (function == ADReadStatus) {
