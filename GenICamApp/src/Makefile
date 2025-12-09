@@ -20,7 +20,7 @@ LIB_SRCS += GenICamFeature.cpp
 LIB_SRCS += ADGenICam.cpp
 USR_CXXFLAGS_Linux += -std=c++11
 
-include $(ADCORE)/ADApp/commonLibraryMakefile
+include $(ADCORE)/cfg/commonLibraryMakefile
 
 #=============================
 
